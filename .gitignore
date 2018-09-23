@@ -230,3 +230,13 @@ registration/
 !/registration/views.py
 !/.gitignore
 !/manage.py
+!/registration/static/registration/
+!/registration/static/registration/js/
+!/registration/urls.py
+!/registration/templates/
+!/registration/forms.py
+!/registration/templates/registration/
+!/registration/static/registration/images/
+!/registration/templates/registration/base.html
+!/registration/static/
+!/registration/templates/registration/registration.html
