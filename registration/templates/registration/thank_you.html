@@ -3,4 +3,27 @@
 
 {% block content %}
 
+    <link href="{% static 'registration/css/add.css' %}" rel="stylesheet"/>
+
+    <div class="page-label-box">
+        <h2 class="page-label">|<span style="padding-right: 8px;">  </span>SUCCESS</h2>
+    </div>
+
+    <div id="frm-container" style="margin-left: 15vw; margin-top: 20vh; width: 80vw;">
+        <h1 style="font-size: 48px;">WELCOME! WE HOPE YOU ENJOY ENVIRONMENTAL FAIR 2018.</h1>
+    </div>
+
+    <a id="link_new" href="localhost:8000/registration/new"></a>
+    <style>
+        * {
+            font-weight: 300;
+            font-size: 22px;
+        }
+    </style>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = $('#link_new').attr('href');
+        }, 2000);
+    </script>
 {% endblock %}
