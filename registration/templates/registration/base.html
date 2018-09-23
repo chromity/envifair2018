@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Environmental Fair 2018 | TIP QC</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'registration/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'registration/css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row" id="navbar-x">
+        <div>
+            <img src="{% static 'registration/images/logo.png' %}"
+                 style="height: 48px; padding-left: 15px; margin-top: -45px;"/>
+        </div>
+        <a class="remove-hover-underline" href="{% url 'registration:index' %}">
+            <div id="navbar-x-title">
+                <h2 class="navbar-x-text navbar-x-event-title">Environmental Fair 2018</h2>
+                <h3 class="navbar-x-text navbar-x-event-host">Supreme Student Council TIP-QC</h3>
+            </div>
+        </a>
+
+        <div class="nav-links">
+            <a class="remove-hover-underline" href="{% url 'registration:index' %}"><h2>Data</h2></a>
+        </div>
+    </div>
+</div>
+<!-- content from templates will be inserted here -->
+<div class="container-fluid">
+    {% block content %}
+    {% endblock content %}
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'registration/js/jquery-3.3.1.js' %}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'registration/js/popper.js' %}"></script>
+<script src="{% static 'registration/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'registration/js/shards.js' %}"></script>
+</body>
+<style>
+    body {
+        background: url({% static 'registration/images/bg.png' %}) fixed no-repeat bottom right;
+        background-size: 50%;
+    }
+</style>
+</html>

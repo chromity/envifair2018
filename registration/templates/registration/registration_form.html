@@ -1,0 +1,59 @@
+{% extends 'registration/base.html' %}
+{% load static %}
+
+{% block content %}
+    <link href="{% static 'registration/css/add.css' %}" rel="stylesheet"/>
+
+    <div class="page-label-box">
+        <h2 class="page-label">|<span style="padding-right: 8px;">  </span>Register</h2>
+    </div>
+
+    <div id="frm-container" style="margin-left: 28vw; margin-top: 10vh; width: 50vw;">
+        <form method="POST" class="frm post-form">{% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="fieldWrapper form-candidate">
+                {{ form.student_number.errors }}
+                <label style="width: 18vw;" class="form-label" for="{{ form.student_number.id_for_label }}">STUDENT ID</label>
+                {{ form.student_number }}
+            </div>
+
+            <div class="fieldWrapper form-input-text">
+                {{ form.first_name.errors }}
+                <label style="width: 18vw;" class="form-label" for="{{ form.first_name.id_for_label }}">FIRST NAME</label>
+                {{ form.first_name }}
+            </div>
+
+            <div class="fieldWrapper form-input-text">
+                {{ form.last_name.errors }}
+                <label style="width: 18vw;" class="form-label" for="{{ form.last_name.id_for_label }}">LAST NAME</label>
+                {{ form.last_name }}
+            </div>
+
+            <div class="fieldWrapper form-input-text">
+                {{ form.year_level.errors }}
+                <label style="width: 18vw;" class="form-label" for="{{ form.confidence.id_for_label }}">YEAR LEVEL</label>
+                {{ form.year_level }}
+            </div>
+
+            <div class="fieldWrapper form-input-text">
+                {{ form.program.errors }}
+                <label style="width: 18vw;" class="form-label" for="{{ form.stage_presence.id_for_label }}">PROGRAM (EX. CPE)</label>
+                {{ form.program }}
+            </div>
+
+            <button type="submit" class="save btn btn-x" style="font-size: 22px; border-color: white; border-radius: 0; padding: 20px 80px 20px 80px; color: white; margin-left: 10vw; background: #00b09b;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */"
+                >
+                Save
+            </button>
+        </form>
+    </div>
+
+    <style>
+        * {
+            font-weight: 300;
+            font-size: 22px;
+        }
+    </style>
+{% endblock %}

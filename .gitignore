@@ -239,4 +239,4 @@ registration/
 !/registration/static/registration/images/
 !/registration/templates/registration/base.html
 !/registration/static/
-!/registration/templates/registration/registration.html
+!/registration/templates/registration/registration_form.html
